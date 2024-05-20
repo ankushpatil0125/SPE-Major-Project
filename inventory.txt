@@ -1,0 +1,1 @@
+localhost ansible_user=ankushpatil488 ansible_ssh_pass=0125 ansible_become_pass=0125

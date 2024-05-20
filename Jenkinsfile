@@ -11,7 +11,7 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('Checkout'){
             steps {
                 script {
                     // Checkout the code from the GitHub repository

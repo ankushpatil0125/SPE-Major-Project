@@ -3,7 +3,8 @@
   hosts: localhost
   remote_user: ankushpatil488
   become: yes
-  become_user: root  tasks:
+  become_user: root  
+  tasks:
     - name: Start Docker service
       service:
         name: docker

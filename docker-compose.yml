@@ -23,6 +23,7 @@ services:
       timeout: 10s
       retries: 3
 
+
   bookreview_db:
     image: mysql:8
     container_name: bookreview_db_container

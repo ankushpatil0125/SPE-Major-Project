@@ -35,7 +35,6 @@ services:
       - bookreview_db:/var/lib/mysql
     networks:
       - book-review-network 
-    restart: always
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 30s
@@ -49,7 +48,6 @@ services:
       - "5002:5002"
     networks:
       - book-review-network
-    restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5002/health"]
       interval: 30s
@@ -63,7 +61,6 @@ services:
       - "3000:3000"
     networks:
       - book-review-network 
-    restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000"]
       interval: 30s

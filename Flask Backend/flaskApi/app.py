@@ -1,9 +1,11 @@
-from flask import Flask, request,render_template, json
+from flask import Flask, request,render_template, json,jsonify
 import joblib
+from flask_cors import CORS
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 # Load TF-IDF Vectorizer
 with open("tfidf_vectorizer.pkl", 'rb') as file:
     tfidf_vectorizer = joblib.load(file)
@@ -21,14 +23,16 @@ def predict():
     # df = data_validation(df)
     # print("type(df['review_text'])",type(df['review_text'])) 
     # print("df['review_text']",df['review_text'])
-    # X_test_tfidf = tfidf_vectorizer.transform(df['review_text'])
-    # with open("trained_model.pkl", 'rb') as file:
-    #         classifier = joblib.load(file)
-    # #xgb_clf = joblib.load('xgb_clf.pkl')
-    # predictions_test = classifier.predict(X_test_tfidf)
+    X_test_tfidf = tfidf_vectorizer.transform([text_input])
+    with open("trained_model.pkl", 'rb') as file:
+            classifier = joblib.load(file)
+    #xgb_clf = joblib.load('xgb_clf.pkl')
+    predictions_test = classifier.predict(X_test_tfidf)
 
     # df['predict rating'] = predictions_test
-    # return df.to_json(orient="split")
+    result = f'Predicted rating: {predictions_test[0]}'
+    print("result",result)
+    return jsonify(result=result)
 
 def data_validation(df):
      # some logic

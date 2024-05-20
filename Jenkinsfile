@@ -7,6 +7,7 @@ pipeline {
         DOCKER_IMAGE_NAME_FLASK  = 'flask_image:latest'
         GITHUB_REPO_URL = 'https://github.com/ankushpatil0125/SPE-Major-Project.git'
         EMAIL_TO = 'ankushpatil488@gmail.com'
+        DOCKERHUB_USER = 'ankushpatil0125'
     }
 
     stages {
@@ -30,9 +31,13 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    docker.build("${DOCKER_IMAGE_NAME_REACT}", 'Spring Backend/BookReview/Dockerfile')
-                    docker.build("${DOCKER_IMAGE_NAME_SPRING}", 'React Frontend/Dockerfile')
-                    docker.build("${DOCKER_IMAGE_NAME_FLASK}", 'Flask Backend/flaskApi/Dockerfile')
+                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_REACT} -f 'Spring Backend/BookReview/Dockerfile' ."
+                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_SPRING} -f 'React Frontend/Dockerfile' ."	
+                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_FLASK} -f 'Flask Backend/flaskApi/Dockerfile' ."
+                    
+                    //docker.build("${DOCKER_IMAGE_NAME_REACT}", 'Spring Backend/BookReview/Dockerfile')
+                    //docker.build("${DOCKER_IMAGE_NAME_SPRING}", 'React Frontend/Dockerfile')
+                    //docker.build("${DOCKER_IMAGE_NAME_FLASK}", 'Flask Backend/flaskApi/Dockerfile')
                 }
             }
         }

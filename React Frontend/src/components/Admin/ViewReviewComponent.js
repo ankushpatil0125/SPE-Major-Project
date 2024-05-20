@@ -35,7 +35,7 @@ const ViewReviewComponent = () => {
 
     const handleRating = async (reviewText, index) => {
         try {
-            const response = await axios.post('http://127.0.0.1:5002/predict', { textInput: reviewText }, {
+            const response = await axios.post('http://localhost:5002/predict', { textInput: reviewText }, {
                 headers: {
                     'Content-Type': 'application/json',
                 }

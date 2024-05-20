@@ -30,6 +30,5 @@
         project_src: ./
         state: present
         pull: yes
-        detached: true
 
 

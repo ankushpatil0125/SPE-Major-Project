@@ -2,8 +2,8 @@
 - name: Pull Docker Image from Docker Hub
   hosts: localhost
   remote_user: ankushpatil488
-  become: false
-  tasks:
+  become: yes
+  become_user: root  tasks:
     - name: Start Docker service
       service:
         name: docker

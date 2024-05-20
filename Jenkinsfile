@@ -46,9 +46,9 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', 'DockerHubCred') {
-                    sh 'docker tag frontend_image ankushpatil0125/frontend_image'
-                    sh 'docker tag backend_image ankushpatil0125/backend_image'
-                    sh 'docker tag flask_image ankushpatil0125/flask_image'
+                    // sh 'docker tag frontend_image ankushpatil0125/frontend_image'
+                    // sh 'docker tag backend_image ankushpatil0125/backend_image'
+                    // sh 'docker tag flask_image ankushpatil0125/flask_image'
                     sh 'docker push ankushpatil0125/frontend_image'
                     sh 'docker push ankushpatil0125/backend_image'
                     sh 'docker push ankushpatil0125/flask_image'

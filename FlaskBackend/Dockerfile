@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . /app
 
 # Install pip requirements
-COPY requirements.txt .
+COPY FlaskBackend/requirements.txt .
 RUN pip install -r requirements.txt
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug

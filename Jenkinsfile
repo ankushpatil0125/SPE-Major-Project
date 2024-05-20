@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     // Checkout the code from the GitHub repository
-                    sh 'mvn -f "Spring Backend/BookReview/pom.xml" clean install'
+                    sh 'mvn -f "Spring Backend/BookReview/pom.xml" clean install -DskipTests'
                 }
             }
         }

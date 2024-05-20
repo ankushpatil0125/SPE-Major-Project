@@ -20,7 +20,7 @@ public class BookReviewResposeDTO {
     private String userFirstName;
     private String userLastName;
     private String review;
-    @JsonFormat(pattern="dd-MMM-yyyy")
+    @JsonFormat(pattern = "dd-MMMM-yyyy", timezone = "Asia/Kolkata")
     private Date reviewDate;
 
     public BookReviewResposeDTO(BookReview bookReview) {

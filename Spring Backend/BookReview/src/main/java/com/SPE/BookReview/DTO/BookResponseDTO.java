@@ -19,7 +19,7 @@ public class BookResponseDTO {
     private String author;
     private double price;
 
-    @JsonFormat(pattern="dd-MMM-yyyy")
+    @JsonFormat(pattern = "dd-MMMM-yyyy", timezone = "Asia/Kolkata")
     private Date publicationDate;
     private String description;
 

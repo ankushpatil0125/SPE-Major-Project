@@ -2,16 +2,16 @@ version: '3'
 
 services:
   userservice:
-    image: backend_image:v1
+    image: ankushpatil0125/backend_image
     container_name: backend_container
     ports:
       - "9090:9090"
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://bookreview_db/bookReviewDB?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_URL=jdbc:mysql://bookreview_db_container/bookReviewDB?createDatabaseIfNotExist=true
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
     networks:
-      - bank-network
+      - book-review-network 
     depends_on:
       - bookreview_db
     volumes:
@@ -19,7 +19,7 @@ services:
       
   bookreview_db:
     image: mysql:8
-    container_name: bookreview_db
+    container_name: bookreview_db_container
     ports:
       - "3308:3306"
     environment:
@@ -28,22 +28,22 @@ services:
     volumes:
       - bookreview_db:/var/lib/mysql
     networks:
-      - bank-network
+      - book-review-network 
       
   flaskBackend:
-    image: flask_image:v2
-    container_name : flask_containerv1
+    image: ankushpatil0125/flask_image
+    container_name : flask_container
     #build:
       #context: .
       #dockerfile: ./Dockerfile
     ports:
       - 5002:5002
     networks:
-      - bank-network
+      - book-review-network
       
   bookreviewfrontend:
-    image: frontend_image:v6
-    container_name: frontend_containerv7
+    image: ankushpatil0125/frontend_image
+    container_name: frontend_container
     #build:
       #context: .
       #dockerfile: ./Dockerfile
@@ -52,10 +52,10 @@ services:
     ports:
       - 3000:3000
     networks:
-      - bank-network  
+      - book-review-network 
       
 networks:
-  bank-network:
+  book-review-network:
     driver: bridge
 
 volumes:

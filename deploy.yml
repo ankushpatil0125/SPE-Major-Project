@@ -1,0 +1,36 @@
+---
+- name: Pull Docker Image from Docker Hub
+  hosts: localhost
+  remote_user: ankushpatil488
+  become: false
+  tasks:
+    - name: Start Docker service
+      service:
+        name: docker
+        state: started
+    - name: Stop and remove existing container if present and running
+      shell: docker stop frontend_container && docker rm frontend_container
+      ignore_errors: true
+    - name: Stop and remove existing container if present and running
+      shell: docker stop backend_container && docker rm backend_container
+      ignore_errors: true
+    - name: Stop and remove existing container if present and running
+      shell: docker stop flask_container && docker rm flask_container
+      ignore_errors: true
+    - name: Stop and remove existing container if present and running
+      shell: docker stop bookreview_db_container && docker rm bookreview_db_container
+      ignore_errors: true
+
+    - name: Copy Docker Compose file
+      copy:
+        src: docker-compose.yml
+        dest: ./
+
+    - name: Run docker compose up command
+      become: true
+      docker_compose:
+        project_src: ./
+        state: present
+        pull: yes
+
+

@@ -6,3 +6,4 @@ pandas
 scikit-learn
 werkzeug
 flask_cors
+huggingface_hub

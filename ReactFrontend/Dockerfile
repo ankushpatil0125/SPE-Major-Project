@@ -1,16 +1,45 @@
+# FROM node:lts-alpine
+# ENV NODE_ENV=production
+# WORKDIR /app
+# COPY ["ReactFrontend/package.json", "ReactFrontend/package-lock.json*", "./"]
+# RUN npm install
+# COPY . ./
+# RUN npm run build
+# EXPOSE 3000
+# RUN chown -R node /usr/src/app
+# USER node
+# CMD ["npm", "start"]
+
+
+# Use the official Node.js image with Alpine Linux
 FROM node:lts-alpine
+
+# Set the environment to production
 ENV NODE_ENV=production
-WORKDIR /app
-COPY ["ReactFrontend/package.json", "ReactFrontend/package-lock.json*", "./"]
-RUN npm install
-COPY . ./
-RUN npm run build
+
+# Set the working directory
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json
+COPY ReactFrontend/package.json ReactFrontend/package-lock.json ./
+
+# Install dependencies
+RUN npm install --production --silent
+
+# Copy the rest of the application files
+COPY ReactFrontend .
+
+# Expose the port the app runs on
 EXPOSE 3000
-RUN chown -R node /usr/src/app
+
+# Change ownership of the application files to the 'node' user
+RUN chown -R node:node /usr/src/app
+
+# Switch to the 'node' user
 USER node
+
+# Start the application
 CMD ["npm", "start"]
-
-
 
 
 

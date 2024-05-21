@@ -3,6 +3,7 @@ import book2 from "../../utils/images/book2.jpg";
 import axios from "axios";
 import { BASE_URL } from "../../utils/Constant";
 import { useNavigate } from "react-router-dom";
+import LoadingComponent from "../Loading/LoadingComponent";
 const AddBookComponent = () => {
   const [bookname, setBookname] = useState("");
   const [typeofbook, setTypeofbook] = useState("");
@@ -12,6 +13,7 @@ const AddBookComponent = () => {
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
   const today = new Date().toISOString().split("T")[0];
+  const [loader,setLoader] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = async () => {
     if (
@@ -22,15 +24,6 @@ const AddBookComponent = () => {
       price &&
       description
     ) {
-      console.log(
-        bookname,
-        typeofbook,
-        author,
-        publicationdate,
-        image,
-        price,
-        description
-      );
       const bookObj = {
         name: bookname,
         category: typeofbook,
@@ -39,22 +32,26 @@ const AddBookComponent = () => {
         price: price,
         description: description,
       };
-      console.log("bookObj", bookObj);
+      // console.log("bookObj", bookObj);
       try {
         const responseAddBook = await axios.post(
           BASE_URL + "admin/add-book",
           bookObj
         );
         if (responseAddBook) {
+          setLoader(true);
           alert("Book added successfully");
+          setLoader(false)
           // window.location.reload();
           navigate("/admin-home");
         }
       } catch (e) {
-        console.log("Error while adding book", e);
+        alert("Error while adding book", e?.response?.data?.message)
+        console.log("Error while adding book", e?.response?.data?.message);
       }
     } else alert("Fill all the required fields");
   };
+  if(loader) return <LoadingComponent/>
   return (
     <div className="flex flex-col md:flex-row">
       {/* <Header /> */}

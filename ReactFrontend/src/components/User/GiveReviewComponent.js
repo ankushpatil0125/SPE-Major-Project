@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
 import axios from "axios";
 import { BASE_URL } from "../../utils/Constant";
+import LoadingComponent from "../Loading/LoadingComponent";
 
 const GiveReviewComponent = () => {
   const location = useLocation();
@@ -10,71 +11,84 @@ const GiveReviewComponent = () => {
   const { product } = location?.state;
   const navigate = useNavigate();
   const bookId = product?.id;
-  const [review,setReview] =useState("");
+  const [review, setReview] = useState("");
   console.log("product", product);
   const currentDate = new Date();
   const formattedDate = currentDate.toLocaleDateString();
   const userId = localStorage.getItem("User_Id");
-  const [prevReviews,setPrevReviews] = useState([]);
+  const [prevReviews, setPrevReviews] = useState([]);
+  const [loader,setLoader] = useState(false);
   useEffect(() => {
     const handlePrevReviews = async () => {
       try {
+        setLoader(true);
         const response = await axios.get(
-          BASE_URL + "users/get-review?userId=" + userId + "&bookId=" +bookId
+          BASE_URL + "users/get-review?userId=" + userId + "&bookId=" + bookId
         );
         if (response) {
           setPrevReviews(response?.data);
           console.log("response", response);
           //  setFilteredProducts(response?.data);
         }
+        setLoader(false);
       } catch (e) {
-        console.log("Error while fetching prev reviews", e?.response?.data?.message);
+        console.log(
+          "Error while fetching prev reviews",
+          e?.response?.data?.message
+        );
+        setLoader(false);
         alert("Error while fetching prev reviews", e?.response?.data?.message);
       }
     };
     handlePrevReviews();
-  },[]);
+  }, []);
 
-  const handleSubmitReview=async ()=>{
-
+  const handleSubmitReview = async () => {
     console.log("review", review);
-    const reviewObj={
-        userId:userId,
-        bookId : bookId,
-        review:review,
-        date:currentDate
-    }
-    console.log("reviewObj",reviewObj);
-    try{
-        const response = await axios.post(BASE_URL+"users/add-review",reviewObj);
-        if(response){
-            alert("Gave review successfully");
-            navigate("/user-home");
-        }
-    }
-    catch(e){
-        console.log("Error while giving review",e?.response?.data?.message);
-        alert("Error while giving review",e?.response?.data?.message);
+    const reviewObj = {
+      userId: userId,
+      bookId: bookId,
+      review: review,
+      date: currentDate,
+    };
+    console.log("reviewObj", reviewObj);
+    try {
+      setLoader(true);
+      const response = await axios.post(
+        BASE_URL + "users/add-review",
+        reviewObj
+      );
+      if (response) {
+        alert("Gave review successfully");
+        navigate("/user-home");
+        setLoader(false);
+      }
+    } catch (e) {
+      console.log("Error while giving review", e?.response?.data?.message);
+      setLoader(false);
+      alert("Error while giving review", e?.response?.data?.message);
     }
   };
-
+  if(loader)return <LoadingComponent/>
   return (
-    <div>
+    <div className="p-10">
       <Header />
-
-      <article className="md:gap-8 md:grid md:grid-cols-3 mt-[150px]">
+      <div className="flex-row justify-between mb-6 mt-[150px]">
+        
+        
+      </div>
+      <article className="mt-[150px] flex justify-center ">
+        <div className="w-full max-w-2xl border border-gray-300 p-10">
+        {/* <img
+          className="w-10 h-10 rounded-full"
+          src="/docs/images/people/profile-picture-5.jpg"
+          alt=""
+        /> */}
+        <div className="ms-4 font-medium dark:text-white">
+          <p>{product?.name}</p>
+        </div>
         <div>
-          <div className="flex items-center mb-6 ">
-            <img
-              className="w-10 h-10 rounded-full"
-              src="/docs/images/people/profile-picture-5.jpg"
-              alt=""
-            />
-            <div className="ms-4 font-medium dark:text-white">
-              <p>{product?.name}</p>
-            </div>
-          </div>
-          <ul className="space-y-4 text-sm text-gray-500 dark:text-gray-400">
+          <ul className="mt-10 space-y-4 text-sm text-gray-500 dark:text-gray-400">
             <li className="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +142,10 @@ const GiveReviewComponent = () => {
             </li>
           </ul>
         </div>
-        <div className="col-span-2 mt-6 md:mt-0">
+        </div>
+      </article>
+      <article className="mt-[150px] flex justify-center">
+        <div className="w-full max-w-2xl">
           <div className="flex items-start mb-5">
             <div className="pe-4">
               <footer>
@@ -142,7 +159,6 @@ const GiveReviewComponent = () => {
               </h4>
             </div>
           </div>
-
           <label
             htmlFor="message"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -157,24 +173,33 @@ const GiveReviewComponent = () => {
             value={review}
             onChange={(e) => setReview(e.target.value)}
           ></textarea>
-          <button onClick={handleSubmitReview} className="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit Review</button>
+          <button
+            onClick={handleSubmitReview}
+            className="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Submit Review
+          </button>
         </div>
       </article>
-      <article className="mt-[150px]">
-        {prevReviews?.map((rev,index)=>(
-           <div key={index}>
-             
-          <footer class="mb-5 text-sm text-gray-500 dark:text-gray-400">
-            <p>
-              Reviewed on
-              <time datetime="2017-03-03 19:00">{rev?.reviewDate}</time>
-            </p>
-          </footer>
-          <p class="mb-2 text-gray-500 dark:text-gray-400">
-              {rev?.review}
-          </p>
-           </div>
-        ))}
+      <article className="mt-[150px] flex justify-center">
+        <div className="w-full max-w-2xl">
+          {prevReviews?.map((rev, index) => (
+            <div
+              key={index}
+              className="p-6 text-base bg-white rounded-lg dark:bg-gray-900 border border-gray-300 mb-6"
+            >
+              <footer className="mb-5 text-sm text-gray-500 dark:text-gray-400">
+                <p>
+                  Reviewed on
+                  <time dateTime="2017-03-03 19:00">{rev?.reviewDate}</time>
+                </p>
+              </footer>
+              <p className="mb-2 text-gray-500 dark:text-gray-400">
+                {rev?.review}
+              </p>
+            </div>
+          ))}
+        </div>
       </article>
     </div>
   );

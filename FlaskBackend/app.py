@@ -25,11 +25,14 @@ def predict():
     data = request.get_json()
     text_input = data.get('textInput', '')  # Extract text input from JSON
     print("Received text input:", text_input)
-    X_test_tfidf = tfidf_vectorizer.transform([text_input])
+    X_test_tfidf = tfidf_vectorizer.transform(text_input)
     predictions_test = classifier.predict(X_test_tfidf)
-    result = f'Predicted rating: {predictions_test[0]}'
+    listofrating=predictions_test.tolist()
+    print("listofrating",listofrating)
+    result = f'{predictions_test}'
+    
     print("result", result)
-    return jsonify(result=result)
+    return jsonify(result=listofrating)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5002)

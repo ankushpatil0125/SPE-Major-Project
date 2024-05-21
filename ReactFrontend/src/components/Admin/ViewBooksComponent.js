@@ -32,17 +32,18 @@ const ViewBooksComponent = () => {
   useEffect(()=>{
     const handleBooks = async () => {
       try{
-        
-
         const response = await axios.get(BASE_URL+'admin/get-books');
+        setLoader(true)
         if(response)
         {
           console.log("response",response);
           setFilteredProducts(response?.data)
+          setLoader(false);
         }
       }catch(e){
         console.log("Error while fetching books",e)
         alert("Error while fetching books",e);
+        setLoader(false);
       }
     }
     handleBooks();
@@ -50,7 +51,7 @@ const ViewBooksComponent = () => {
   const handleReview = (product) => {
     navigate("/view-review",{state:{product:product}});
   };
-  // if (loader) return <LoadingComponent />;
+  if (loader) return <LoadingComponent />;
 
   return (
     <div className="container mx-auto px-4 mt-20">

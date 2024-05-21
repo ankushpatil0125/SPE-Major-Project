@@ -3,11 +3,11 @@ import Header from "../Header/Header";
 import { Link } from "react-router-dom";
 import AddBookComponent from "./AddBookComponent";
 import ViewBooksComponent from "./ViewBooksComponent";
-import ViewReviews from "./ViewReviews";
+// import ViewReviews from "./ViewReviews";
 const AdminHomePage = () => {
   // Always set isNavOpen to true
   const isNavOpen = true;
-  const [currentPage, setCurrentPage] = useState("add");
+  const [currentPage, setCurrentPage] = useState("viewbooks");
   const renderPage = () => {
     switch (currentPage) {
       case "add":
@@ -33,29 +33,7 @@ const AdminHomePage = () => {
         aria-labelledby="drawer-navigation-label"
       >
         <div className="py-4 overflow-y-auto">
-          <button
-            onClick={() => setCurrentPage("add")}
-            className={`flex bg-transparent items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group ${currentPage === "add"
-            ? "text-blue-800 bg-[#f5f5f5]"
-            : "text-gray-900 "}`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
 
-            <span className="ms-3">Add Books</span>
-          </button>
           <button
             onClick={() => setCurrentPage("viewbooks")}
             className={`flex bg-transparent items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group ${currentPage === "viewbooks"
@@ -78,6 +56,29 @@ const AdminHomePage = () => {
             </svg>
 
             <span className="ms-3">View Books</span>
+          </button>
+          <button
+            onClick={() => setCurrentPage("add")}
+            className={`flex bg-transparent items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group ${currentPage === "add"
+            ? "text-blue-800 bg-[#f5f5f5]"
+            : "text-gray-900 "}`}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+
+            <span className="ms-3">Add Books</span>
           </button>
           {/* <button
             onClick={() => setCurrentPage("viewreviews")}

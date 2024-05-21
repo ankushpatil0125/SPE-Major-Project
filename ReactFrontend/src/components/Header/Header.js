@@ -4,15 +4,18 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const handleLogout= () => {
+  const role = localStorage.getItem("ROLE");
+
+  const handleLogout = () => {
     localStorage.removeItem("ROLE");
     localStorage.removeItem("User_Id");
     navigate('/');
-  }
+  };
+
   return (
     <div className="fixed top-0 left-0 w-full z-50">
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
-        <div className=" flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -66,44 +69,68 @@ const Header = () => {
 
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
-                <Link
-                  to="/admin-home"
-                  className={`block py-2 px-3 rounded md:p-0 ${location.pathname === '/admin-home' ? 'text-blue-700 bg-blue-100 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}
-                  aria-current={location.pathname === '/admin-home' ? 'page' : undefined}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className={`block py-2 px-3 rounded md:p-0 ${location.pathname === '/about' ? 'text-blue-700 bg-blue-100 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className={`block py-2 px-3 rounded md:p-0 ${location.pathname === '/services' ? 'text-blue-700 bg-blue-100 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <button
-                  onClick={handleLogout}
-                  className={`block py-2 px-3 rounded md:p-0 ${location.pathname === '/contact' ? 'text-blue-700 bg-blue-100 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}
-                >
-                  Logout
-                </button>
-              </li>
+              {role === 'admin' ? (
+                <>
+                  <li>
+                    <Link
+                      to="/admin-home"
+                      className={`block py-2 px-3 rounded md:p-0 ${location.pathname === '/admin-home' ? 'text-blue-700 bg-blue-100 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}
+                      aria-current={location.pathname === '/admin-home' ? 'page' : undefined}
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/about"
+                      className={`block py-2 px-3 rounded md:p-0 ${location.pathname === '/about' ? 'text-blue-700 bg-blue-100 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <button
+                      onClick={handleLogout}
+                      className={`block py-2 px-3 rounded md:p-0 ${location.pathname === '/contact' ? 'text-blue-700 bg-blue-100 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}
+                    >
+                      Logout
+                    </button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link
+                      to="/user-home"
+                      className={`block py-2 px-3 rounded md:p-0 ${location.pathname === '/user-home' ? 'text-blue-700 bg-blue-100 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}
+                      aria-current={location.pathname === '/user-home' ? 'page' : undefined}
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/about"
+                      className={`block py-2 px-3 rounded md:p-0 ${location.pathname === '/about' ? 'text-blue-700 bg-blue-100 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <button
+                      onClick={handleLogout}
+                      className={`block py-2 px-3 rounded md:p-0 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
+                    >
+                      Logout
+                    </button>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>
       </nav>
-      <hr/>
+      <hr />
     </div>
   );
 };

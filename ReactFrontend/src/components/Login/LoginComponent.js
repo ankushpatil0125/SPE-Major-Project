@@ -38,7 +38,7 @@ const LoginComponent = () => {
     }
     console.log("requestData",loginObj)
     try {
-      // setLoading(true);
+      setLoading(true);
       const response = await axios.post(BASE_URL+'login/',loginObj);
       
       console.log("Login API Response: ", response);
@@ -49,12 +49,12 @@ const LoginComponent = () => {
         if (response?.data?.role === "admin") navigate("/admin-home");
         else if (response?.data?.role === "user") navigate("/user-home");
         }
-        // setLoading(false);
+        setLoading(false);
       }
      catch (error) {
       console.log("error while login",error)
       // alert(error.response.data);
-      // setLoading(false);
+      setLoading(false);
       alert(`Login Failed : ${error?.response?.data?.message}`);
     }
   };
@@ -72,7 +72,7 @@ const LoginComponent = () => {
         navigate("/user-home", { replace: true });
 
     }, []);
-  // if (loading) return <LoadingComponent />;
+  if (loading) return <LoadingComponent />;
   return (
     <div>
       <div className="font-[sans-serif] text-[#333]">

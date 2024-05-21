@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BASE_URL } from "../../utils/Constant";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import LoadingComponent from "../Loading/LoadingComponent";
 
 const RegisterComponent = () => {
   const [actor, setActor] = useState("");
@@ -11,6 +12,7 @@ const RegisterComponent = () => {
   const [password, setPassword] = useState("");
   const [mobile, setMobile] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = async() => {
     if (
@@ -42,18 +44,21 @@ const RegisterComponent = () => {
       }
       console.log("user object", userObject);
       try {
+        setLoader(true)
         const responseAddBook = await axios.post(
           BASE_URL + "users/register",
           userObject
         );
         console.log("add user response",responseAddBook);
         if (responseAddBook?.data === true) {
-          alert("Book added successfully");
+          alert("User added successfully");
+          setLoader(false);
           // window.location.reload();
           navigate('/')
         }
       } catch (e) {
-        console.log("Error while adding user", e);
+        alert("Error while adding user", e?.response?.data?.message)
+        console.log("Error while adding user", e?.response?.data?.message);
       }
     } else if (password !== confirmPassword) {
       alert("Password and confirm password should be the same");
@@ -61,7 +66,7 @@ const RegisterComponent = () => {
       alert("Please fill all fields");
     }
   };
-
+  if(loader) return <LoadingComponent/>
   return (
     <div className="max-w-4xl mx-auto font-[sans-serif] text-[#333] p-6">
       <div className="text-center mb-16">

@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 ENV NODE_ENV=production
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY ["ReactFrontend/package.json", "ReactFrontend/package-lock.json*", "./"]
 RUN npm install
 COPY . ./

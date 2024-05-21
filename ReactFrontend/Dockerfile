@@ -2,8 +2,9 @@ FROM node:lts-alpine
 ENV NODE_ENV=production
 WORKDIR /usr/src/app
 COPY ["ReactFrontend/package.json", "ReactFrontend/package-lock.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
-COPY . .
+RUN npm install
+COPY . ./
+RUN npm run build
 EXPOSE 3000
 RUN chown -R node /usr/src/app
 USER node

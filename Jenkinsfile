@@ -31,8 +31,8 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_REACT} -f SpringBackend/Dockerfile ."
-                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_SPRING} -f ReactFrontend/Dockerfile ."	
+                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_REACT} -f ReactFrontend/Dockerfile ."
+                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_SPRING} -f SpringBackend/Dockerfile ."	
                     sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_FLASK} -f FlaskBackend/Dockerfile ."
                     //docker.build("${DOCKER_IMAGE_NAME_REACT}", 'Spring Backend/BookReview/Dockerfile')
                     //docker.build("${DOCKER_IMAGE_NAME_SPRING}", 'React Frontend/Dockerfile')

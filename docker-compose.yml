@@ -16,7 +16,6 @@ services:
       - bookreview_db
     volumes:
       - /home:/logs
-    restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9090/actuator/health"]
       interval: 30s

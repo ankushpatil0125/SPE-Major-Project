@@ -1,0 +1,16 @@
+cluster.name: "docker-cluster"
+network.host: 0.0.0.0
+http.port: 9200
+
+# Bootstrap settings to ensure memory locking and prevent swapping
+bootstrap.memory_lock: true
+
+# xpack settings to disable security (since xpack.security.enabled=false in docker-compose)
+xpack.security.enabled: false
+
+# Single node discovery
+discovery.type: single-node
+
+# Optional: Additional settings for logging and monitoring
+path.logs: /usr/share/elasticsearch/logs
+path.data: /usr/share/elasticsearch/data

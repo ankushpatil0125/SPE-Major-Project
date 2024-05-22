@@ -66,10 +66,63 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-      
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.3.3
+    container_name: elasticsearch
+    restart: always
+    environment:
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+      - network.host=0.0.0.0
+      - http.port=9200
+    ports:
+      - "9200:9200"
+    networks:
+      - book-review-network
+    volumes:
+      - elastic_data:/usr/share/elasticsearch/data
+      - /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/elasticsearch:/var/log/elasticsearch
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.3.3
+    container_name: kibana
+    restart: always
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    networks:
+      - book-review-network
+    depends_on:
+      - elasticsearch
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.3.3
+    container_name: logstash
+    restart: always
+    volumes:
+      - /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/logstash/pipeline:/usr/share/logstash/pipeline:ro
+    environment:
+      - LS_JAVA_OPTS=-Xmx512m -Xms512m
+    ports:
+      - "5001:5001/tcp"
+      - "5001:5001/udp"
+      - "9600:9600"
+    networks:
+      - book-review-network
+    depends_on:
+      - elasticsearch
+
 networks:
   book-review-network:
     driver: bridge
 
 volumes:
   bookreview_db:
+  elastic_data:
+    driver: local

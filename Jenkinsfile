@@ -19,6 +19,13 @@ pipeline {
                 }
             }
         }
+        stage('Check TEST cases') {
+        steps {
+            script {
+                sh 'mvn -f SpringBackend/ test'
+            }
+        }
+    }
 	stage('Build Maven Project') {
             steps {
                 script {

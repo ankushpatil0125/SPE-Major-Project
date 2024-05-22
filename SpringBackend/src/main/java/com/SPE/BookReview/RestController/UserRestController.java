@@ -1,6 +1,5 @@
 package com.SPE.BookReview.RestController;
 
-
 import com.SPE.BookReview.DTO.AddBookReviewDTO;
 import com.SPE.BookReview.DTO.BookResponseDTO;
 import com.SPE.BookReview.DTO.BookReviewResposeDTO;
@@ -43,8 +42,7 @@ public class UserRestController {
             logger.info("Register user : {}", registerUsersDTO);
             boolean status = userService.registerUser(registerUsersDTO);
             return status;
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             logger.error("Error registering user: {}", e.getMessage());
             throw new APIRequestException(e.getMessage());
         }
@@ -54,15 +52,14 @@ public class UserRestController {
     public List<BookResponseDTO> getAllBooks() {
         try {
             logger.info("Get all books");
-            List<Book> bookList =  bookService.getAllBooks();
+            List<Book> bookList = bookService.getAllBooks();
             List<BookResponseDTO> bookResponseDTOList = new ArrayList<>();
             for (Book book : bookList) {
                 BookResponseDTO bookResponseDTO = new BookResponseDTO(book);
                 bookResponseDTOList.add(bookResponseDTO);
             }
             return bookResponseDTOList;
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             logger.error("Error getting books: {}", e.getMessage());
             throw new APIRequestException(e.getMessage());
         }
@@ -74,27 +71,28 @@ public class UserRestController {
             logger.info("Add review : {}", addBookReviewDTO);
             boolean status = userService.addReview(addBookReviewDTO);
             return status;
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             logger.error("Error adding review: {}", e.getMessage());
             throw new APIRequestException(e.getMessage());
         }
     }
 
-
     @GetMapping("/get-review")
-    public List<BookReviewResposeDTO> getAllReviews(@RequestParam("userId") int userId,@RequestParam("bookId") int bookId) {
-        List<BookReview> bookReviewList = userService.getAllReviewsForBook(userId,bookId);
-        List<BookReviewResposeDTO> bookReviewResponseDTOList = new ArrayList<>();
-        for (BookReview bookReview : bookReviewList) {
-            BookReviewResposeDTO bookReviewResponseDTO = new BookReviewResposeDTO(bookReview);
-            bookReviewResponseDTOList.add(bookReviewResponseDTO);
+    public List<BookReviewResposeDTO> getAllReviews(@RequestParam("userId") int userId,
+            @RequestParam("bookId") int bookId) {
+        try {
+            logger.info("get all reviews of : {} for {}", userId, bookId);
+            List<BookReview> bookReviewList = userService.getAllReviewsForBook(userId, bookId);
+            List<BookReviewResposeDTO> bookReviewResponseDTOList = new ArrayList<>();
+            for (BookReview bookReview : bookReviewList) {
+                BookReviewResposeDTO bookReviewResponseDTO = new BookReviewResposeDTO(bookReview);
+                bookReviewResponseDTOList.add(bookReviewResponseDTO);
+            }
+            return bookReviewResponseDTOList;
+        } catch (Exception e) {
+            logger.error("Error get all reviews of : {} for {} : {}",userId, bookId,e.getMessage());
+            throw new APIRequestException(e.getMessage());
         }
-        return bookReviewResponseDTOList;
     }
-
-
-
-
 
 }

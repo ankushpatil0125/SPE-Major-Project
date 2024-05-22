@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SAVE-TO-FILE" class="ch.qos.logback.core.FileAppender">
+
+        <file>../logs/app.log</file>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level -%logger{36} - %msg%n
+            </Pattern>
+        </encoder>
+
+    </appender>
+<!--    &lt;!&ndash; New Logstash TCP appender &ndash;&gt;-->
+<!--    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">-->
+<!--        <destination>${LOGGING_LOGSTASH_HOST:-localhost}:${LOGGING_LOGSTASH_PORT:-5001}</destination>-->
+<!--        <encoder class="net.logstash.logback.encoder.LogstashEncoder" />-->
+<!--    </appender>-->
+
+    <logger name="org.springframework.boot" level="OFF" />
+    <logger name="com.SPE.BookReview.RestController" level="INFO" />
+    <logger name="com.SPE.BookReview.RestController" level="WARN" />
+    <logger name="com.SPE.BookReview.RestController" level="ERROR" />
+
+
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="SAVE-TO-FILE"/>
+<!--        <appender-ref ref="LOGSTASH"/>-->
+    </root>
+
+</configuration>

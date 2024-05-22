@@ -10,6 +10,8 @@ import com.SPE.BookReview.Entity.BookReview;
 import com.SPE.BookReview.Exceptions.APIRequestException;
 import com.SPE.BookReview.Services.BookService;
 import com.SPE.BookReview.Services.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +28,8 @@ public class UserRestController {
     private UserService userService;
     private BookService bookService;
 
+    private final Logger logger = LoggerFactory.getLogger(UserRestController.class);
+
     @Autowired
     public UserRestController(UserService userService, BookService bookService) {
         this.userService = userService;
@@ -36,34 +40,43 @@ public class UserRestController {
     public Boolean register(@RequestBody RegisterUsersDTO registerUsersDTO) {
 
         try {
-
+            logger.info("Register user : {}", registerUsersDTO);
             boolean status = userService.registerUser(registerUsersDTO);
             return status;
         }
         catch (Exception e) {
+            logger.error("Error registering user: {}", e.getMessage());
             throw new APIRequestException(e.getMessage());
         }
     }
 
     @GetMapping("/get-books")
     public List<BookResponseDTO> getAllBooks() {
-        List<Book> bookList =  bookService.getAllBooks();
-        List<BookResponseDTO> bookResponseDTOList = new ArrayList<>();
-        for (Book book : bookList) {
-            BookResponseDTO bookResponseDTO = new BookResponseDTO(book);
-            bookResponseDTOList.add(bookResponseDTO);
+        try {
+            logger.info("Get all books");
+            List<Book> bookList =  bookService.getAllBooks();
+            List<BookResponseDTO> bookResponseDTOList = new ArrayList<>();
+            for (Book book : bookList) {
+                BookResponseDTO bookResponseDTO = new BookResponseDTO(book);
+                bookResponseDTOList.add(bookResponseDTO);
+            }
+            return bookResponseDTOList;
         }
-        return bookResponseDTOList;
+        catch (Exception e) {
+            logger.error("Error getting books: {}", e.getMessage());
+            throw new APIRequestException(e.getMessage());
+        }
     }
 
     @PostMapping("/add-review")
     public Boolean addReview(@RequestBody AddBookReviewDTO addBookReviewDTO) {
         try {
-
+            logger.info("Add review : {}", addBookReviewDTO);
             boolean status = userService.addReview(addBookReviewDTO);
             return status;
         }
         catch (Exception e) {
+            logger.error("Error adding review: {}", e.getMessage());
             throw new APIRequestException(e.getMessage());
         }
     }

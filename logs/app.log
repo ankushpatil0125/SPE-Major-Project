@@ -1,0 +1,270 @@
+22-05-2024 18:02:43.157 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 36559 (/home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend/target/classes started by nikhil in /home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend)
+22-05-2024 18:02:43.159 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 18:02:43.470 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 18:02:43.503 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
+22-05-2024 18:02:43.745 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:02:43.746 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+22-05-2024 18:02:43.746 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+22-05-2024 18:02:43.765 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22-05-2024 18:02:43.870 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 18:02:43.900 [restartedMain] INFO  -org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+22-05-2024 18:02:43.934 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 18:02:44.067 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 18:02:44.080 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22-05-2024 18:02:44.337 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f9efd5c
+22-05-2024 18:02:44.338 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22-05-2024 18:02:44.359 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 18:02:44.360 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 18:02:44.796 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 18:02:44.832 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:02:44.971 [restartedMain] INFO  -o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+22-05-2024 18:02:45.390 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:02:45.401 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Started BookReviewApplication in 2.39 seconds (process running for 2.888)
+22-05-2024 18:03:03.818 [Thread-5] INFO  -o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:03:03.821 [Thread-5] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:03:03.823 [Thread-5] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+22-05-2024 18:03:03.826 [Thread-5] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+22-05-2024 18:03:03.894 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 36559 (/home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend/target/classes started by nikhil in /home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend)
+22-05-2024 18:03:03.894 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 18:03:03.971 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 18:03:03.976 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+22-05-2024 18:03:04.017 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:03:04.017 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+22-05-2024 18:03:04.017 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+22-05-2024 18:03:04.021 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22-05-2024 18:03:04.041 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 18:03:04.041 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 18:03:04.043 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 18:03:04.044 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+22-05-2024 18:03:04.051 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@99329e1
+22-05-2024 18:03:04.052 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+22-05-2024 18:03:04.052 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 18:03:04.052 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 18:03:04.083 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 18:03:04.096 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:03:04.192 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:03:04.195 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Started BookReviewApplication in 0.323 seconds (process running for 21.682)
+22-05-2024 18:05:44.884 [Thread-7] INFO  -o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:05:44.886 [Thread-7] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:05:44.887 [Thread-7] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+22-05-2024 18:05:44.892 [Thread-7] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+22-05-2024 18:05:44.955 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 36559 (/home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend/target/classes started by nikhil in /home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend)
+22-05-2024 18:05:44.956 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 18:05:45.074 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 18:05:45.080 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+22-05-2024 18:05:45.134 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:05:45.134 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+22-05-2024 18:05:45.134 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+22-05-2024 18:05:45.138 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22-05-2024 18:05:45.158 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 18:05:45.159 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 18:05:45.161 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 18:05:45.161 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+22-05-2024 18:05:45.170 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a96b55b
+22-05-2024 18:05:45.171 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+22-05-2024 18:05:45.171 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 18:05:45.171 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 18:05:45.208 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 18:05:45.220 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:05:45.348 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:05:45.351 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Started BookReviewApplication in 0.418 seconds (process running for 182.838)
+22-05-2024 18:05:46.746 [Thread-11] INFO  -o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:05:46.749 [Thread-11] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:05:46.749 [Thread-11] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+22-05-2024 18:05:46.752 [Thread-11] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+22-05-2024 18:05:46.802 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 36559 (/home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend/target/classes started by nikhil in /home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend)
+22-05-2024 18:05:46.802 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 18:05:46.882 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 18:05:46.893 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+22-05-2024 18:05:46.945 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:05:46.945 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+22-05-2024 18:05:46.945 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+22-05-2024 18:05:46.949 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22-05-2024 18:05:46.968 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 18:05:46.969 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 18:05:46.970 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 18:05:46.971 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+22-05-2024 18:05:46.980 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18b022cd
+22-05-2024 18:05:46.980 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+22-05-2024 18:05:46.980 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 18:05:46.980 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 18:05:47.013 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 18:05:47.024 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:05:47.121 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:05:47.123 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Started BookReviewApplication in 0.333 seconds (process running for 184.61)
+22-05-2024 18:05:51.527 [Thread-15] INFO  -o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:05:51.530 [Thread-15] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:05:51.531 [Thread-15] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+22-05-2024 18:05:51.534 [Thread-15] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+22-05-2024 18:05:51.593 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 36559 (/home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend/target/classes started by nikhil in /home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend)
+22-05-2024 18:05:51.594 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 18:05:51.651 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 18:05:51.655 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+22-05-2024 18:05:51.690 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:05:51.690 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+22-05-2024 18:05:51.690 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+22-05-2024 18:05:51.693 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22-05-2024 18:05:51.710 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 18:05:51.711 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 18:05:51.712 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 18:05:51.712 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+22-05-2024 18:05:51.719 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c0eb5a7
+22-05-2024 18:05:51.719 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+22-05-2024 18:05:51.719 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 18:05:51.719 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 18:05:51.746 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 18:05:51.757 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:05:51.850 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:05:51.852 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Started BookReviewApplication in 0.281 seconds (process running for 189.339)
+22-05-2024 18:07:48.441 [Thread-19] INFO  -o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:07:48.446 [Thread-19] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:07:48.447 [Thread-19] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+22-05-2024 18:07:48.450 [Thread-19] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+22-05-2024 18:07:48.513 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 36559 (/home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend/target/classes started by nikhil in /home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend)
+22-05-2024 18:07:48.514 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 18:07:48.569 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 18:07:48.573 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+22-05-2024 18:07:48.610 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:07:48.611 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+22-05-2024 18:07:48.611 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+22-05-2024 18:07:48.614 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22-05-2024 18:07:48.632 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 18:07:48.633 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 18:07:48.635 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 18:07:48.635 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+22-05-2024 18:07:48.642 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c1b67aa
+22-05-2024 18:07:48.642 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+22-05-2024 18:07:48.643 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 18:07:48.643 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 18:07:48.672 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 18:07:48.683 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:07:48.782 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:07:48.784 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Started BookReviewApplication in 0.284 seconds (process running for 306.271)
+22-05-2024 18:09:56.388 [Thread-23] INFO  -o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:09:56.392 [Thread-23] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:09:56.393 [Thread-23] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+22-05-2024 18:09:56.396 [Thread-23] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+22-05-2024 18:09:56.444 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 36559 (/home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend/target/classes started by nikhil in /home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend)
+22-05-2024 18:09:56.444 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 18:09:56.498 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 18:09:56.503 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 3 JPA repository interfaces.
+22-05-2024 18:09:56.543 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:09:56.543 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+22-05-2024 18:09:56.543 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+22-05-2024 18:09:56.547 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22-05-2024 18:09:56.563 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 18:09:56.563 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 18:09:56.565 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 18:09:56.565 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+22-05-2024 18:09:56.573 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72e17c89
+22-05-2024 18:09:56.573 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+22-05-2024 18:09:56.573 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 18:09:56.573 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 18:09:56.600 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 18:09:56.614 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:09:56.741 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:09:56.746 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Started BookReviewApplication in 0.312 seconds (process running for 434.233)
+22-05-2024 18:18:06.039 [Thread-27] INFO  -o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:18:06.043 [Thread-27] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:18:06.044 [Thread-27] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+22-05-2024 18:18:06.047 [Thread-27] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+22-05-2024 18:18:06.088 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 36559 (/home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend/target/classes started by nikhil in /home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend)
+22-05-2024 18:18:06.088 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 18:18:06.136 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 18:18:06.139 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 3 JPA repository interfaces.
+22-05-2024 18:18:06.172 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:18:06.172 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+22-05-2024 18:18:06.172 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+22-05-2024 18:18:06.175 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22-05-2024 18:18:06.190 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 18:18:06.191 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 18:18:06.192 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 18:18:06.193 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+22-05-2024 18:18:06.199 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@267aa8bd
+22-05-2024 18:18:06.199 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+22-05-2024 18:18:06.200 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 18:18:06.200 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 18:18:06.223 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 18:18:06.233 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:18:06.317 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:18:06.319 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Started BookReviewApplication in 0.24 seconds (process running for 923.806)
+22-05-2024 18:33:09.055 [SpringApplicationShutdownHook] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:33:09.056 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+22-05-2024 18:33:09.058 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+22-05-2024 18:33:11.069 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 39276 (/home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend/target/classes started by nikhil in /home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend)
+22-05-2024 18:33:11.070 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 18:33:11.391 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 18:33:11.422 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+22-05-2024 18:33:11.681 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:33:11.682 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+22-05-2024 18:33:11.682 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+22-05-2024 18:33:11.702 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22-05-2024 18:33:11.775 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 18:33:11.795 [restartedMain] INFO  -org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+22-05-2024 18:33:11.809 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 18:33:11.912 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 18:33:11.924 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22-05-2024 18:33:12.085 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cccbb6d
+22-05-2024 18:33:12.086 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22-05-2024 18:33:12.106 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 18:33:12.106 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 18:33:12.529 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 18:33:12.564 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:33:12.732 [restartedMain] INFO  -o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+22-05-2024 18:33:13.144 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:33:13.158 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Started BookReviewApplication in 2.253 seconds (process running for 2.626)
+22-05-2024 18:33:34.977 [Thread-5] INFO  -o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:33:34.980 [Thread-5] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:33:34.981 [Thread-5] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+22-05-2024 18:33:34.985 [Thread-5] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+22-05-2024 18:33:35.039 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 39276 (/home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend/target/classes started by nikhil in /home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend)
+22-05-2024 18:33:35.039 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 18:33:35.104 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 18:33:35.110 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+22-05-2024 18:33:35.150 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:33:35.151 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+22-05-2024 18:33:35.151 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+22-05-2024 18:33:35.154 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22-05-2024 18:33:35.172 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 18:33:35.173 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 18:33:35.175 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 18:33:35.176 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+22-05-2024 18:33:35.183 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17c1c2af
+22-05-2024 18:33:35.183 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+22-05-2024 18:33:35.184 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 18:33:35.184 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 18:33:35.247 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 18:33:35.260 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:33:35.373 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:33:35.376 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Started BookReviewApplication in 0.35 seconds (process running for 24.844)
+22-05-2024 18:35:06.336 [Thread-7] INFO  -o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:35:06.339 [Thread-7] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:35:06.340 [Thread-7] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+22-05-2024 18:35:06.344 [Thread-7] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+22-05-2024 18:35:06.420 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 39276 (/home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend/target/classes started by nikhil in /home/nikhil/IIITB/SEM2/SPE/Major project/GIT/SPE-Major-Project/SpringBackend)
+22-05-2024 18:35:06.420 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 18:35:06.477 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 18:35:06.482 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+22-05-2024 18:35:06.526 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:35:06.527 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+22-05-2024 18:35:06.527 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+22-05-2024 18:35:06.530 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22-05-2024 18:35:06.554 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 18:35:06.557 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 18:35:06.560 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 18:35:06.561 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+22-05-2024 18:35:06.573 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5dc8b841
+22-05-2024 18:35:06.573 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+22-05-2024 18:35:06.574 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 18:35:06.574 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 18:35:06.627 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 18:35:06.641 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 18:35:06.758 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+22-05-2024 18:35:06.761 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Started BookReviewApplication in 0.358 seconds (process running for 116.229)
+22-05-2024 18:35:29.532 [http-nio-9090-exec-2] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22-05-2024 18:35:29.533 [http-nio-9090-exec-2] INFO  -o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+22-05-2024 18:35:29.534 [http-nio-9090-exec-2] INFO  -o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+22-05-2024 18:35:29.615 [http-nio-9090-exec-2] WARN  -o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+22-05-2024 18:35:29.615 [http-nio-9090-exec-2] ERROR -o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'nikhil@123' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'
+22-05-2024 18:35:29.622 [http-nio-9090-exec-2] ERROR -c.S.B.R.UserRestController - Error registering user: could not execute statement [Duplicate entry 'nikhil@123' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'] [insert into user (email,mobile_no,password,role,user_first_name,user_last_name) values (?,?,?,?,?,?)]; SQL [insert into user (email,mobile_no,password,role,user_first_name,user_last_name) values (?,?,?,?,?,?)]; constraint [user.UK_ob8kqyqqgmefl0aco34akdtpe]
+22-05-2024 18:35:29.638 [http-nio-9090-exec-2] WARN  -o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.SPE.BookReview.Exceptions.APIRequestException: could not execute statement [Duplicate entry 'nikhil@123' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'] [insert into user (email,mobile_no,password,role,user_first_name,user_last_name) values (?,?,?,?,?,?)]; SQL [insert into user (email,mobile_no,password,role,user_first_name,user_last_name) values (?,?,?,?,?,?)]; constraint [user.UK_ob8kqyqqgmefl0aco34akdtpe]]

@@ -25,6 +25,7 @@ pipeline {
                 sh 'mvn -f SpringBackend/ test'
             }
         }
+        }
         stage('Build Maven Project') {
             steps {
                 script {

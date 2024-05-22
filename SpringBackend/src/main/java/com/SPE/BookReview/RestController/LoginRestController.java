@@ -25,7 +25,7 @@ public class LoginRestController {
     @PostMapping("/")
     public LoginResponseDTO login(@RequestBody LoginDTO loginDTO) {
         try {
-            logger.info("User Login {}",loginDTO.email);
+            logger.info("User Login {}",loginDTO.getEmail());
             
             return userService.loginUser(loginDTO);
         }

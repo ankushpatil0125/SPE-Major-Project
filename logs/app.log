@@ -460,3 +460,27 @@
 22-05-2024 23:51:54.490 [SpringApplicationShutdownHook] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 22-05-2024 23:51:54.491 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
 22-05-2024 23:51:54.500 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+23-05-2024 00:41:19.353 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - Starting BookReviewApplication using Java 22.0.1 with PID 60383 (/home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/SpringBackend/target/classes started by ankushpatil488 in /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/SpringBackend)
+23-05-2024 00:41:19.371 [restartedMain] INFO  -c.S.BookReview.BookReviewApplication - No active profile set, falling back to 1 default profile: "default"
+23-05-2024 00:41:22.997 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-05-2024 00:41:23.281 [restartedMain] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 255 ms. Found 3 JPA repository interfaces.
+23-05-2024 00:41:25.911 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+23-05-2024 00:41:25.918 [restartedMain] INFO  -o.a.catalina.core.StandardService - Starting service [Tomcat]
+23-05-2024 00:41:25.920 [restartedMain] INFO  -o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+23-05-2024 00:41:26.145 [restartedMain] INFO  -o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23-05-2024 00:41:27.140 [restartedMain] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-05-2024 00:41:27.552 [restartedMain] INFO  -org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+23-05-2024 00:41:27.709 [restartedMain] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+23-05-2024 00:41:28.612 [restartedMain] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+23-05-2024 00:41:28.748 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+23-05-2024 00:41:30.426 [restartedMain] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66f31987
+23-05-2024 00:41:30.432 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+23-05-2024 00:41:30.697 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+23-05-2024 00:41:30.706 [restartedMain] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+23-05-2024 00:41:34.986 [restartedMain] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23-05-2024 00:41:35.379 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-05-2024 00:41:37.171 [restartedMain] INFO  -o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+23-05-2024 00:41:40.530 [restartedMain] INFO  -o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+23-05-2024 00:41:40.565 [restartedMain] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+23-05-2024 00:41:40.602 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+23-05-2024 00:41:40.642 [restartedMain] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

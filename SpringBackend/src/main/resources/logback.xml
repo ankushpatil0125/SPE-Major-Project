@@ -27,9 +27,9 @@
    </appender>
 
     <logger name="org.springframework.boot" level="OFF" />
-    <logger name="com.SPE.BookReview.RestController" level="INFO" />
+    <!-- <logger name="com.SPE.BookReview.RestController" level="INFO" />
     <logger name="com.SPE.BookReview.RestController" level="WARN" />
-    <logger name="com.SPE.BookReview.RestController" level="ERROR" />
+    <logger name="com.SPE.BookReview.RestController" level="ERROR" /> -->
 
 
 

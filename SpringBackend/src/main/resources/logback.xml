@@ -33,7 +33,7 @@
 
 
 
-    <root level="info">
+    <root level="INFO">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="SAVE-TO-FILE"/>
         <appender-ref ref="LOGSTASH"/>

@@ -268,3 +268,195 @@
 22-05-2024 18:35:29.615 [http-nio-9090-exec-2] ERROR -o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'nikhil@123' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'
 22-05-2024 18:35:29.622 [http-nio-9090-exec-2] ERROR -c.S.B.R.UserRestController - Error registering user: could not execute statement [Duplicate entry 'nikhil@123' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'] [insert into user (email,mobile_no,password,role,user_first_name,user_last_name) values (?,?,?,?,?,?)]; SQL [insert into user (email,mobile_no,password,role,user_first_name,user_last_name) values (?,?,?,?,?,?)]; constraint [user.UK_ob8kqyqqgmefl0aco34akdtpe]
 22-05-2024 18:35:29.638 [http-nio-9090-exec-2] WARN  -o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.SPE.BookReview.Exceptions.APIRequestException: could not execute statement [Duplicate entry 'nikhil@123' for key 'user.UK_ob8kqyqqgmefl0aco34akdtpe'] [insert into user (email,mobile_no,password,role,user_first_name,user_last_name) values (?,?,?,?,?,?)]; SQL [insert into user (email,mobile_no,password,role,user_first_name,user_last_name) values (?,?,?,?,?,?)]; constraint [user.UK_ob8kqyqqgmefl0aco34akdtpe]]
+22-05-2024 23:45:07.073 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.RestController.UserRestControllerTest]: UserRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:46:10.465 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+22-05-2024 23:46:10.471 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+22-05-2024 23:46:10.970 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.RestController.AdminRestControllerTest]: AdminRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:46:11.460 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+22-05-2024 23:46:11.461 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+22-05-2024 23:46:11.556 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Services.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:46:11.945 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Services.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:46:12.001 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Repository.UsersRepositoryTest]: UsersRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:46:12.060 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - Starting UsersRepositoryTest using Java 17.0.10 with PID 30437 (started by ankushpatil488 in /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/SpringBackend)
+22-05-2024 23:46:12.060 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 23:46:12.235 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 23:46:12.289 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
+22-05-2024 23:46:12.518 [main] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 23:46:12.580 [main] INFO  -org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+22-05-2024 23:46:12.624 [main] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 23:46:12.763 [main] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 23:46:12.796 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22-05-2024 23:46:13.256 [main] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48dc9950
+22-05-2024 23:46:13.258 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22-05-2024 23:46:13.319 [main] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 23:46:13.321 [main] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 23:46:14.317 [main] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 23:46:14.468 [main] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:46:14.711 [main] INFO  -o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+22-05-2024 23:46:15.143 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - Started UsersRepositoryTest in 3.111 seconds (process running for 69.537)
+22-05-2024 23:46:15.343 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.BookReviewApplicationTests]: BookReviewApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:46:15.394 [main] INFO  -c.S.B.BookReviewApplicationTests - Starting BookReviewApplicationTests using Java 17.0.10 with PID 30437 (started by ankushpatil488 in /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/SpringBackend)
+22-05-2024 23:46:15.395 [main] INFO  -c.S.B.BookReviewApplicationTests - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 23:46:15.688 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 23:46:15.702 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+22-05-2024 23:46:15.864 [main] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 23:46:15.867 [main] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 23:46:15.871 [main] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 23:46:15.872 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+22-05-2024 23:46:15.895 [main] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e1c387e
+22-05-2024 23:46:15.905 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+22-05-2024 23:46:15.906 [main] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 23:46:15.906 [main] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 23:46:15.968 [main] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 23:46:15.997 [main] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:46:16.399 [main] INFO  -c.S.B.BookReviewApplicationTests - Started BookReviewApplicationTests in 1.035 seconds (process running for 70.793)
+22-05-2024 23:46:16.419 [SpringApplicationShutdownHook] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:46:16.421 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+22-05-2024 23:46:16.429 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+22-05-2024 23:46:16.432 [SpringApplicationShutdownHook] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:46:16.433 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+22-05-2024 23:46:16.439 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+22-05-2024 23:47:10.372 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.RestController.UserRestControllerTest]: UserRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:48:17.301 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+22-05-2024 23:48:17.311 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+22-05-2024 23:48:18.093 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.RestController.AdminRestControllerTest]: AdminRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:48:19.128 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+22-05-2024 23:48:19.130 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+22-05-2024 23:48:19.378 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Services.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:48:20.092 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Services.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:48:20.239 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Repository.UsersRepositoryTest]: UsersRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:48:20.397 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - Starting UsersRepositoryTest using Java 17.0.10 with PID 31636 (started by ankushpatil488 in /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/SpringBackend)
+22-05-2024 23:48:20.402 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 23:48:20.747 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 23:48:20.850 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 3 JPA repository interfaces.
+22-05-2024 23:48:21.285 [main] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 23:48:21.415 [main] INFO  -org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+22-05-2024 23:48:21.537 [main] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 23:48:21.825 [main] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 23:48:21.939 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22-05-2024 23:48:22.859 [main] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c59dfc7
+22-05-2024 23:48:22.864 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22-05-2024 23:48:23.016 [main] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 23:48:23.020 [main] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 23:48:23.849 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.RestController.UserRestControllerTest]: UserRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:48:24.383 [main] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 23:48:24.604 [main] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:48:24.896 [main] INFO  -o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+22-05-2024 23:48:25.360 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - Started UsersRepositoryTest in 5.034 seconds (process running for 81.738)
+22-05-2024 23:48:25.616 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.BookReviewApplicationTests]: BookReviewApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:48:25.680 [main] INFO  -c.S.B.BookReviewApplicationTests - Starting BookReviewApplicationTests using Java 17.0.10 with PID 31636 (started by ankushpatil488 in /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/SpringBackend)
+22-05-2024 23:48:25.681 [main] INFO  -c.S.B.BookReviewApplicationTests - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 23:48:25.945 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 23:48:25.957 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+22-05-2024 23:48:26.132 [main] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 23:48:26.135 [main] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 23:48:26.141 [main] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 23:48:26.142 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+22-05-2024 23:48:26.165 [main] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d5a2267
+22-05-2024 23:48:26.166 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+22-05-2024 23:48:26.167 [main] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 23:48:26.168 [main] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 23:48:26.262 [main] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 23:48:26.318 [main] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:48:26.729 [main] INFO  -c.S.B.BookReviewApplicationTests - Started BookReviewApplicationTests in 1.091 seconds (process running for 83.107)
+22-05-2024 23:48:26.757 [SpringApplicationShutdownHook] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:48:26.760 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+22-05-2024 23:48:26.773 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+22-05-2024 23:48:26.776 [SpringApplicationShutdownHook] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:48:26.777 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+22-05-2024 23:48:26.790 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+22-05-2024 23:49:29.924 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+22-05-2024 23:49:29.930 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+22-05-2024 23:49:30.517 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.RestController.AdminRestControllerTest]: AdminRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:49:31.074 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+22-05-2024 23:49:31.075 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+22-05-2024 23:49:31.192 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Services.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:49:31.680 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Services.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:49:31.772 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Repository.UsersRepositoryTest]: UsersRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:49:31.865 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - Starting UsersRepositoryTest using Java 17.0.10 with PID 32630 (started by ankushpatil488 in /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/SpringBackend)
+22-05-2024 23:49:31.867 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 23:49:32.118 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 23:49:32.179 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+22-05-2024 23:49:32.400 [main] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 23:49:32.473 [main] INFO  -org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+22-05-2024 23:49:32.509 [main] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 23:49:32.631 [main] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 23:49:32.676 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22-05-2024 23:49:33.069 [main] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48dc9950
+22-05-2024 23:49:33.076 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22-05-2024 23:49:33.137 [main] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 23:49:33.138 [main] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 23:49:34.188 [main] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 23:49:34.277 [main] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:49:34.617 [main] INFO  -o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+22-05-2024 23:49:35.243 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - Started UsersRepositoryTest in 3.418 seconds (process running for 73.912)
+22-05-2024 23:49:35.431 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.BookReviewApplicationTests]: BookReviewApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:49:35.504 [main] INFO  -c.S.B.BookReviewApplicationTests - Starting BookReviewApplicationTests using Java 17.0.10 with PID 32630 (started by ankushpatil488 in /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/SpringBackend)
+22-05-2024 23:49:35.505 [main] INFO  -c.S.B.BookReviewApplicationTests - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 23:49:35.803 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 23:49:35.815 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+22-05-2024 23:49:36.012 [main] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 23:49:36.015 [main] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 23:49:36.020 [main] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 23:49:36.022 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+22-05-2024 23:49:36.050 [main] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e1c387e
+22-05-2024 23:49:36.050 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+22-05-2024 23:49:36.052 [main] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 23:49:36.053 [main] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 23:49:36.149 [main] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 23:49:36.194 [main] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:49:36.612 [main] INFO  -c.S.B.BookReviewApplicationTests - Started BookReviewApplicationTests in 1.139 seconds (process running for 75.282)
+22-05-2024 23:49:36.638 [SpringApplicationShutdownHook] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:49:36.640 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+22-05-2024 23:49:36.649 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+22-05-2024 23:49:36.651 [SpringApplicationShutdownHook] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:49:36.652 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+22-05-2024 23:49:36.658 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+22-05-2024 23:50:43.909 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.RestController.UserRestControllerTest]: UserRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:51:47.480 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+22-05-2024 23:51:47.486 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+22-05-2024 23:51:48.076 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.RestController.AdminRestControllerTest]: AdminRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:51:48.736 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+22-05-2024 23:51:48.737 [main] INFO  -o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+22-05-2024 23:51:48.909 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Services.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:51:49.398 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Services.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:51:49.512 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.Repository.UsersRepositoryTest]: UsersRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:51:49.618 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - Starting UsersRepositoryTest using Java 17.0.10 with PID 33608 (started by ankushpatil488 in /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/SpringBackend)
+22-05-2024 23:51:49.620 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 23:51:49.870 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 23:51:49.917 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
+22-05-2024 23:51:50.152 [main] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 23:51:50.214 [main] INFO  -org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+22-05-2024 23:51:50.264 [main] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 23:51:50.457 [main] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 23:51:50.502 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22-05-2024 23:51:50.983 [main] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40ed4674
+22-05-2024 23:51:50.985 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22-05-2024 23:51:51.037 [main] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 23:51:51.040 [main] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 23:51:51.976 [main] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 23:51:52.100 [main] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:51:52.462 [main] INFO  -o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+22-05-2024 23:51:53.036 [main] INFO  -c.S.B.Repository.UsersRepositoryTest - Started UsersRepositoryTest in 3.464 seconds (process running for 71.004)
+22-05-2024 23:51:53.255 [main] INFO  -o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SPE.BookReview.BookReviewApplicationTests]: BookReviewApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22-05-2024 23:51:53.316 [main] INFO  -c.S.B.BookReviewApplicationTests - Starting BookReviewApplicationTests using Java 17.0.10 with PID 33608 (started by ankushpatil488 in /home/ankushpatil488/IIITB/SEM2/SPE/2ndHalf/Final Project/SPE-Major-Project/SpringBackend)
+22-05-2024 23:51:53.318 [main] INFO  -c.S.B.BookReviewApplicationTests - No active profile set, falling back to 1 default profile: "default"
+22-05-2024 23:51:53.604 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-05-2024 23:51:53.615 [main] INFO  -o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+22-05-2024 23:51:53.791 [main] INFO  -o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-05-2024 23:51:53.794 [main] INFO  -o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22-05-2024 23:51:53.800 [main] INFO  -o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22-05-2024 23:51:53.802 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+22-05-2024 23:51:53.829 [main] INFO  -com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cef365b
+22-05-2024 23:51:53.829 [main] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+22-05-2024 23:51:53.830 [main] WARN  -org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+22-05-2024 23:51:53.830 [main] WARN  -org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+22-05-2024 23:51:53.973 [main] INFO  -o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22-05-2024 23:51:54.015 [main] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:51:54.422 [main] INFO  -c.S.B.BookReviewApplicationTests - Started BookReviewApplicationTests in 1.147 seconds (process running for 72.39)
+22-05-2024 23:51:54.456 [SpringApplicationShutdownHook] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:51:54.458 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+22-05-2024 23:51:54.485 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+22-05-2024 23:51:54.490 [SpringApplicationShutdownHook] INFO  -o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-05-2024 23:51:54.491 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+22-05-2024 23:51:54.500 [SpringApplicationShutdownHook] INFO  -com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.

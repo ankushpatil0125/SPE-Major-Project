@@ -10,6 +10,8 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:mysql://bookreview_db_container:3306/bookReviewDB?createDatabaseIfNotExist=true
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
+      - LOGGING_LOGSTASH_HOST=logstash
+      - LOGGING_LOGSTASH_PORT=5001
     networks:
       - book-review-network 
     depends_on:

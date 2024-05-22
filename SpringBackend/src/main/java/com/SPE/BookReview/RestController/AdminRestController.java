@@ -24,7 +24,7 @@ public class AdminRestController {
 
     private BookService bookService;
 
-    private final Logger logger = LoggerFactory.getLogger(AdminRestController.class);
+    private static final Logger logger = LoggerFactory.getLogger(AdminRestController.class);
 
     @Autowired
     public AdminRestController(BookService bookService) {

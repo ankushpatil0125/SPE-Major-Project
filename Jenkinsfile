@@ -26,41 +26,41 @@ pipeline {
         //     }
         // }
         // }
-        stage('Build Maven Project') {
-            steps {
-                script {
-                    // Checkout the code from the GitHub repository
-                    sh 'mvn -f SpringBackend/pom.xml clean install -DskipTests'
-                }
-            }
-        }
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    // Build Docker image
-                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_REACT} -f ReactFrontend/Dockerfile ."
-                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_SPRING} -f SpringBackend/Dockerfile ."	
-                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_FLASK} -f FlaskBackend/Dockerfile ."
-                    //docker.build("${DOCKER_IMAGE_NAME_REACT}", 'Spring Backend/BookReview/Dockerfile')
-                    //docker.build("${DOCKER_IMAGE_NAME_SPRING}", 'React Frontend/Dockerfile')
-                    //docker.build("${DOCKER_IMAGE_NAME_FLASK}", 'Flask Backend/flaskApi/Dockerfile')
-                }
-            }
-        }
-        stage('Push Docker Images') {
-            steps {
-                script{
-                    docker.withRegistry('', 'DockerHubCred') {
-                    // sh 'docker tag frontend_image ankushpatil0125/frontend_image'
-                    // sh 'docker tag backend_image ankushpatil0125/backend_image'
-                    // sh 'docker tag flask_image ankushpatil0125/flask_image'
-                    sh 'docker push ankushpatil0125/frontend_image'
-                    sh 'docker push ankushpatil0125/backend_image'
-                    sh 'docker push ankushpatil0125/flask_image'
-                    }
-                 }
-            }
-        }
+        // stage('Build Maven Project') {
+        //     steps {
+        //         script {
+        //             // Checkout the code from the GitHub repository
+        //             sh 'mvn -f SpringBackend/pom.xml clean install -DskipTests'
+        //         }
+        //     }
+        // }
+        // stage('Build Docker Image') {
+        //     steps {
+        //         script {
+        //             // Build Docker image
+        //             sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_REACT} -f ReactFrontend/Dockerfile ."
+        //             sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_SPRING} -f SpringBackend/Dockerfile ."	
+        //             sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_FLASK} -f FlaskBackend/Dockerfile ."
+        //             //docker.build("${DOCKER_IMAGE_NAME_REACT}", 'Spring Backend/BookReview/Dockerfile')
+        //             //docker.build("${DOCKER_IMAGE_NAME_SPRING}", 'React Frontend/Dockerfile')
+        //             //docker.build("${DOCKER_IMAGE_NAME_FLASK}", 'Flask Backend/flaskApi/Dockerfile')
+        //         }
+        //     }
+        // }
+        // stage('Push Docker Images') {
+        //     steps {
+        //         script{
+        //             docker.withRegistry('', 'DockerHubCred') {
+        //             // sh 'docker tag frontend_image ankushpatil0125/frontend_image'
+        //             // sh 'docker tag backend_image ankushpatil0125/backend_image'
+        //             // sh 'docker tag flask_image ankushpatil0125/flask_image'
+        //             sh 'docker push ankushpatil0125/frontend_image'
+        //             sh 'docker push ankushpatil0125/backend_image'
+        //             sh 'docker push ankushpatil0125/flask_image'
+        //             }
+        //          }
+        //     }
+        // }
 
    stage('Run Ansible Playbook') {
             steps {

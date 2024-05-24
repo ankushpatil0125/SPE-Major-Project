@@ -1,6 +1,6 @@
 ---
 - name: Pull Docker Image from Docker Hub
-  hosts: localhost
+  hosts: ec2
   remote_user: ankushpatil488
   tasks:
     - name: Start Docker service
@@ -31,7 +31,7 @@
     - name: Stop and remove existing container  elasticsearchif present and running
       shell: docker stop elasticsearch && docker rm elasticsearch
       ignore_errors: true
-
+    
 
     - name: Copy Docker Compose file
       copy:

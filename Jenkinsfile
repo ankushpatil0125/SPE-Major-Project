@@ -76,7 +76,7 @@ pipeline {
 //             }
 //         }
 //     }
-	stage('Run Ansible EC2 Playbook') {
+	    stage('Run Ansible EC2 Playbook') {
             steps {
                 script {
                     ansiblePlaybook(

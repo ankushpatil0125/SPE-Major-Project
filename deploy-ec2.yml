@@ -4,7 +4,7 @@
   remote_user: ubuntu
   become: yes
   vars:
-    project_dir: /home/ubuntu/spe-project
+    project_dir: /home/ubuntu/
     ansible_python_interpreter: /usr/bin/python3  # Ensure Ansible uses the correct Python interpreter
   tasks:
     - name: Gathering Facts

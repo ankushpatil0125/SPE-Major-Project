@@ -8,6 +8,9 @@ pipeline {
         GITHUB_REPO_URL = 'https://github.com/ankushpatil0125/SPE-Major-Project.git'
         EMAIL_TO = 'ankushpatil488@gmail.com'
         DOCKERHUB_USER = 'ankushpatil0125'
+        EC2_DOCKER_IMAGE_NAME_REACT = 'EC2_frontend_image:latest'
+        EC2_DOCKER_IMAGE_NAME_SPRING = 'EC2_backend_image:latest'
+        EC2_DOCKER_IMAGE_NAME_FLASK  = 'EC2_flask_image:latest'
     }
 
     stages {
@@ -38,12 +41,12 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_REACT} -f ReactFrontend/Dockerfile ."
-                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_SPRING} -f SpringBackend/Dockerfile ."	
-                    sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_FLASK} -f FlaskBackend/Dockerfile ."
-                    //docker.build("${DOCKER_IMAGE_NAME_REACT}", 'Spring Backend/BookReview/Dockerfile')
-                    //docker.build("${DOCKER_IMAGE_NAME_SPRING}", 'React Frontend/Dockerfile')
-                    //docker.build("${DOCKER_IMAGE_NAME_FLASK}", 'Flask Backend/flaskApi/Dockerfile')
+                    // sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_REACT} -f ReactFrontend/Dockerfile ."
+                    // sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_SPRING} -f SpringBackend/Dockerfile ."	
+                    // sh "docker build -t ${DOCKERHUB_USER}/${DOCKER_IMAGE_NAME_FLASK} -f FlaskBackend/Dockerfile ."
+                    sh "docker build -t ${DOCKERHUB_USER}/${EC2_DOCKER_IMAGE_NAME_REACT} -f ReactFrontend/Dockerfile ."
+                    sh "docker build -t ${DOCKERHUB_USER}/${EC2_DOCKER_IMAGE_NAME_SPRING} -f SpringBackend/Dockerfile ."	
+                    sh "docker build -t ${DOCKERHUB_USER}/${EC2_DOCKER_IMAGE_NAME_FLASK} -f FlaskBackend/Dockerfile ."
                 }
             }
         }
@@ -54,26 +57,38 @@ pipeline {
                     // sh 'docker tag frontend_image ankushpatil0125/frontend_image'
                     // sh 'docker tag backend_image ankushpatil0125/backend_image'
                     // sh 'docker tag flask_image ankushpatil0125/flask_image'
-                    sh 'docker push ankushpatil0125/frontend_image'
-                    sh 'docker push ankushpatil0125/backend_image'
-                    sh 'docker push ankushpatil0125/flask_image'
+                    sh 'docker push ankushpatil0125/EC2_frontend_image'
+                    sh 'docker push ankushpatil0125/EC2_backend_image'
+                    sh 'docker push ankushpatil0125/EC2_flask_image'
                     }
                  }
             }
         }
 
-   stage('Run Ansible Playbook') {
+//    stage('Run Ansible Playbook') {
+//             steps {
+//                 script {
+//                     ansiblePlaybook(
+//                         playbook: 'deploy.yml',
+//                         inventory: 'inventory.txt'
+//                      )
+//                 }
+//             }
+//         }
+//     }
+	stage('Run Ansible EC2 Playbook') {
             steps {
                 script {
                     ansiblePlaybook(
-                        playbook: 'deploy.yml',
-                        inventory: 'inventory.txt'
+                        playbook: 'deploy-ec2.yml',
+                        inventory: 'ec2-inventory.txt'
+                        credentialsId: 'Jenkins_access_ec2',
+			            extras: '-e ansible_user=ubuntu -e ansible_ssh_private_key_file=/home/ankushpatil488/Downloads/SPE_WebServer_Key.pem '
                      )
                 }
             }
         }
     }
-	
     post {
         success {
             emailext body: 'Build successful.Check console output at $BUILD_URL to view the results. \n\n ${CHANGES} \n\n -------------------------------------------------- \n${BUILD_LOG, maxLines=100, escapeHtml=false}', 

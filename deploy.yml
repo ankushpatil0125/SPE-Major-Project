@@ -1,6 +1,6 @@
 ---
 - name: Pull Docker Image from Docker Hub
-  hosts: localhost
+  hosts: ec2
   remote_user: ankushpatil488
   tasks:
     - name: Start Docker service

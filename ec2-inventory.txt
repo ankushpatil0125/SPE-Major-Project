@@ -1,0 +1,2 @@
+[ec2]
+18.234.46.183 ansible_python_interpreter=/usr/bin/python3

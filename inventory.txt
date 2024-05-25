@@ -1,5 +1,2 @@
 [local]
 localhost ansible_host=localhost ansible_user=ankushpatil488 ansible_ssh_pass=0125 ansible_become_pass=0125
-
-[ec2]
-ec2-instance ansible_host=54.86.136.160 ansible_user=ubuntu ansible_ssh_private_key_file=/home/ankushpatil488/Downloads/BookRatingPrediction.pub

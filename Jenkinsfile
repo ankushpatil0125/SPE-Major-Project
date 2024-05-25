@@ -8,9 +8,9 @@ pipeline {
         GITHUB_REPO_URL = 'https://github.com/ankushpatil0125/SPE-Major-Project.git'
         EMAIL_TO = 'ankushpatil488@gmail.com'
         DOCKERHUB_USER = 'ankushpatil0125'
-        EC2_DOCKER_IMAGE_NAME_REACT = 'EC2_frontend_image:latest'
-        EC2_DOCKER_IMAGE_NAME_SPRING = 'EC2_backend_image:latest'
-        EC2_DOCKER_IMAGE_NAME_FLASK  = 'EC2_flask_image:latest'
+        EC2_DOCKER_IMAGE_NAME_REACT = 'ec2_frontend_image:latest'
+        EC2_DOCKER_IMAGE_NAME_SPRING = 'ec2_backend_image:latest'
+        EC2_DOCKER_IMAGE_NAME_FLASK  = 'ec2_flask_image:latest'
     }
 
     stages {
@@ -57,9 +57,9 @@ pipeline {
                     // sh 'docker tag frontend_image ankushpatil0125/frontend_image'
                     // sh 'docker tag backend_image ankushpatil0125/backend_image'
                     // sh 'docker tag flask_image ankushpatil0125/flask_image'
-                    sh 'docker push ankushpatil0125/EC2_frontend_image'
-                    sh 'docker push ankushpatil0125/EC2_backend_image'
-                    sh 'docker push ankushpatil0125/EC2_flask_image'
+                    sh 'docker push ankushpatil0125/ec2_frontend_image'
+                    sh 'docker push ankushpatil0125/ec2_backend_image'
+                    sh 'docker push ankushpatil0125/ec2_flask_image'
                     }
                  }
             }

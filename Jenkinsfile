@@ -76,7 +76,16 @@ pipeline {
 //             }
 //         }
 //     }
-	        stage('Add Host Key') {
+	    stage('Setup Virtual Environment') {
+            steps {
+                sh '''
+                    python3 -m venv ansible-venv
+                    source ansible-venv/bin/activate
+                    pip install ansible
+                '''
+            }
+        }
+        stage('Add Host Key') {
             steps {
                 sh '''
                     ssh-keyscan -H 18.234.46.183 >> ~/.ssh/known_hosts
@@ -86,15 +95,14 @@ pipeline {
         stage('Run Ansible EC2 Playbook') {
             steps {
                 script {
-                    ansiblePlaybook(
-                        playbook: 'deploy-ec2.yml',
-                        inventory: 'ec2-inventory.txt',
-                        extras: '-e ansible_user=ubuntu -e ansible_python_interpreter=/usr/bin/python3',
-                        credentialsId: '98a007f4-c8f5-49ed-b520-c2ec2524f97d'
-                    )
+                    sh '''
+                        source ansible-venv/bin/activate
+                        ansible-playbook deploy-ec2.yml -i ec2-inventory.txt -e ansible_user=ubuntu -e ansible_python_interpreter=/usr/bin/python3
+                    '''
                 }
             }
         }
+
 
     }
     post {

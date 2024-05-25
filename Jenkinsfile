@@ -70,7 +70,7 @@ pipeline {
                         playbook: 'deploy-ec2.yml',
                         inventory: 'ec2-inventory.txt',
                         extras: '-e ansible_user=ubuntu -e ansible_ssh_private_key_file=/home/ankushpatil488/Downloads/SPE_WebServer_Key.pem',
-                        credentialsId: 'Jenkins_access_ec2' // Reference your credentials ID here
+                        credentialsId: '98a007f4-c8f5-49ed-b520-c2ec2524f97d' // Reference your credentials ID here
                     )
                 }
             }

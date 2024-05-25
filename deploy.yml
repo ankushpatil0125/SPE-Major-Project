@@ -32,6 +32,7 @@
       shell: docker stop elasticsearch && docker rm elasticsearch
       ignore_errors: true
 
+
     - name: Copy Docker Compose file
       copy:
         src: docker-compose.yml
@@ -42,5 +43,3 @@
         project_src: ./
         state: present
         pull: yes
-
-

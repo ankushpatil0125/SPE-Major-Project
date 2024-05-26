@@ -9,7 +9,6 @@ pipeline {
         EMAIL_TO = 'ankushpatil488@gmail.com'
         DOCKERHUB_USER = 'ankushpatil0125'
     }
-
     stages {
         stage('Checkout'){
             steps {
